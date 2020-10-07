@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina Personal</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript">
+		function generar(estilof){
+			var color = estilof.colorf.value;
+			var tipot = estilof.estilot.value;
+			var colort = estilof.colorti.value;
+			var tmision = estilof.mision.value;
+			var tcon = estilof.estilop.value;
+			var colorc = estilof.colorcon.value;
+			var colorbo = estilof.colorb.value;
+			var estilobo = estilof.estilobor.value;
+			document.getElementById('principal').style.backgroundColor=color;
+			document.getElementById('titulo1').style.fontFamily=tipot;
+			document.getElementById('titulo1').style.color=colort;
+			document.getElementById('titulo2').style.fontFamily=tipot;
+			document.getElementById('titulo2').style.color=colort;
+			 var tmision = document.getElementById('mision').value;
+			 document.getElementById('misionp').innerHTML = tmision;
+			 var tvision = document.getElementById('vision').value;
+			 document.getElementById('visionp').innerHTML = tvision;
+			 document.getElementById('misionp').style.fontFamily=tcon;
+			 document.getElementById('visionp').style.fontFamily=tcon;
+			 document.getElementById('misionp').style.color=colorc;
+			 document.getElementById('visionp').style.color=colorc;
+			 document.getElementById('bordep').style.borderColor=colorbo;
+			 document.getElementById('bordep').style.borderStyle=estilobo;
+            function cambiarTamano(){
+              var misionp=document.getElementById('misionp');
+              var ct=document.getElementById('cambiartamano');
+              misionp.style.fontSize=ct.value;
+}
+var i;
+var b = document.getElementsByName("b");
+	for( i = 0; i < b.length; i++){
+      if(b[i].checked){
+        var n = b[i].value;
+      } 
+    }
+ switch (n) {
+      case 'a':
+        document.getElementById("img").src="4.jpg";
+        break;
+        case 'b':
+          document.getElementById("img").src="5.jpg";
+          break;
+          case 'c':
+            document.getElementById("img").src="6.jpg";
+            break;
+    
+      default:
+        imgop='nada';
+        break;
+    }
+    var j;
+var f = document.getElementsByName("f");
+	for( j = 0; j < f.length; j++){
+      if(f[j].checked){
+        var m = f[j].value;
+      } 
+    }
+ switch (m) {
+      case 'a':
+        document.getElementById("imgm").src="7.jpg";
+        break;
+        case 'b':
+          document.getElementById("imgm").src="8.jpg";
+          break;
+          case 'c':
+            document.getElementById("imgm").src="9.jpg";
+            break;
+    
+      default:
+        imgop='nada';
+        break;
+    }
+      var g;
+var z = document.getElementsByName("z");
+	for( g = 0; g < f.length; g++){
+      if(z[g].checked){
+        var p = z[g].value;
+      } 
+    }
+ switch (p) {
+      case 'a':
+        document.getElementById("imgv").src="10.jpg";
+        break;
+        case 'b':
+          document.getElementById("imgv").src="11.jpg";
+          break;
+          case 'c':
+            document.getElementById("imgv").src="12.jpg";
+            break;
+    
+      default:
+        imgop='nada';
+        break;
+    }
+		}
+	</script>
+</head>
+
+<body>
+
+<section>
+
+    <div class="container-all">
+
+        <input type="radio" id="1" name="image-slide" hidden/>
+        <input type="radio" id="2" name="image-slide" hidden/>
+        <input type="radio" id="3" name="image-slide" hidden/>
+
+        <div class="slide">
+
+            <div class="item-slide">
+                <img src="1.jpg">
+            </div>
+
+            <div class="item-slide">
+                <img src="2.jpg">
+            </div>
+
+            <div class="item-slide">
+                <img src="3.jpg">
+            </div>
+
+        </div>
+
+        <div class="pagination">
+           
+            <label class="pagination-item" for="1">
+                <img src="01.jpg">
+            </label>
+            
+            <label class="pagination-item" for="2">
+                <img src="02.jpg">
+            </label>
+            
+            <label class="pagination-item" for="3">
+                <img src="03.jpg">
+            </label>
+            
+        </div>
+        
+    </div>
+</section>
+    
+			<br>
+   
+<section>
+	<form name="estilof">
+	        <label>Misión</label>
+			<input type="text" id="mision" required min="1" max="10" />
+
+		    <label>Color de la página</label>
+			<input type="color" id="colorf" id="colorb"><br><br>
+
+			<label>Visión</label>
+			<input type="text" id="vision" required min="1" max="10" /><br/><br>
+
+
+
+			<label>Tipo letra titulos</label>
+			<select id="estilot">
+					<option value="Arial">Arial</option>
+					<option value="Cursive">Cursive</option>
+					<option value="Times New Roman">Times New Roman</option>
+			</select>
+
+			<label>Tipo letra contenidos</label>
+			<select id="estilop">
+					<option value="Arial">Arial</option>
+					<option value="Cursive">Cursive</option>
+					<option value="Times New Roman">Times New Roman</option>
+			</select><br><br>
+
+		    <label>Color texto de titulos</label>
+			<input type="color" name="colorti" id="color">
+
+			 <label>Color texto contenido</label>
+			<input type="color" name="colorcon" id="color1">
+                <h2 style="text-align: center;">Selecciona tu logo</h2>
+			
+			<figure>
+			<img src="4.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="b" value="a">Imagen 1
+			<img src="5.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="b" value="b">Imagen 2
+			<img src="6.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="b" value="c">Imagen 3
+			</figure>
+
+			<h3 style="text-align: center;">Imagen para Misión</h3>
+			<figure>
+			<img src="7.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="f" value="a">Imagen 1
+			<img src="8.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="f" value="b">Imagen 2
+			<img src="9.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="f" value="c">Imagen 3
+			</figure>
+			<h3 style="text-align: center;">Imagen para Visión</h3>
+			<figure>
+				<img src="10.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="z" value="a">Imagen 1
+			<img src="11.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="z" value="b">Imagen 2
+			<img src="12.jpg" style="border: 5px solid yellow;" width="200" height="200" hspace="60" alt=" Imagen a bordear ">
+			<input type="radio" name="z" value="c">Imagen 3
+			</figure>
+
+			
+
+			 <label>Color texto de borde</label>
+			<input type="color" name="colorb" id="color1">
+
+			<label>Tipo de borde inferior</label>
+			<select name="estilobor" id="borde1">
+					<option value="dashed">Dashed</option>
+					<option value="dotted">Dotted</option>
+					<option value="double">Double</option>
+			</select><br><br>
+            
+			<input type="button" value="Ejecutar Página" style="float: right;" onclick="generar(this.form);">
+</form>
+</section>
+        
+    <br>
+<section id="principal">
+	<img src="" alt="logo imagen" id="img" width="100" height="100" style="float: left;" ><br>
+	 <p id="titulo1">Mision</p>
+	 <p id="misionp"></p>
+	 <img src="" alt="logo imagen" id="imgm">
+	 <p id="titulo2">Vision</p>
+	 <p id="visionp"></p>
+	  <img src="" alt="logo imagen" id="imgv" width="100" height="100">
+	  <div id="bordep" style="border:5px solid violet;">
+	  </div>
+</section>
+<section>
+	<p>
+		Luna Joselin 
+        <br>
+	</p>
+</section>
+
+
+    </body>
+
+</html>
